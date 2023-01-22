@@ -1,0 +1,290 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./images/bg-intro-desktop.png);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root {
+    /* Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+    /* Neutral */
+    --DarkBlue: rgb(62, 60, 73);
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+h1 {
+    margin-top: 4rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    line-height: 2rem;
+}
+
+p {
+    font-weight: 500;
+    padding: 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+    color: white;
+}
+
+.free-trial {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem 4rem;
+    font-weight: 100;
+    line-height: 1.8rem;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 9px 0px;
+}
+
+::placeholder {
+    color: gray;
+}
+
+
+.form {
+    width: 90%;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 9px 0px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: -10px;
+    padding: 0;
+}
+
+
+.form-control label {
+    display: inline-block;
+}
+
+/* inside input */
+.form-control input {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-weight: 500;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: var(--Red);
+}
+
+/* error icon */
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    color: var(--Red);
+}
+
+.form-control.success i.fa-circle-check {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-circle-exclamation {
+    color: var(--Red);
+    visibility: visible;
+}
+
+.form-control small {
+    visibility: hidden;
+    color: var(--Red);
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    font-style: italic;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+
+form input[type="submit"] {
+    cursor: pointer;
+    width: 90%;
+    aspect-ratio: 11/1;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--Green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+
+.TOS {
+    padding: 2rem 4rem;
+    line-height: 1.5rem;
+    font-size: .7rem;
+    color: var(--GrayishBlue);
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--Red);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 640px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1200px) {
+
+    main {
+        flex-direction: row;
+        height: 100vh;
+        margin: 0 auto;
+    }
+    
+    .left p{
+        text-align: left;
+    }
+    .left h1{
+        text-align: left;
+    }
+
+    .left {
+        width:40%;
+    }
+
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+        margin-bottom: 0;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
